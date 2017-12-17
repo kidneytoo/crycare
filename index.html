@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CryCare : ห่วงใยเสียงร้องไห้ใกล้ตัวคุณ</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="behind.js"></script>
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+<body>
+	<div class = 'userContainer'>
+		<div class = 'headerContainer'>
+			<h1>CryCare</h1>
+			<h5>ห่วงใยเสียงร้องไห้ใกล้ตัวคุณ</h5>
+		</div>
+		<div class = 'interactContainer'>
+			<div class = 'warningContainer show'>
+				<h1>สภาพเด็กน้อยของคุณ</h1>
+				<div class = 'warningPic'>
+					<img src="./img/happy.svg" alt="happy">
+				</div>
+				<div>เด็กน้อยของคุณกำลังมีความสุข</div>
+			</div>
+			<div class="warningContainer hide">
+				<h1>สภาพเด็กน้อยของคุณ</h1>
+				<div class = 'warningPic'>
+					<img src="./img/crying.svg" alt="crying">
+				</div>
+				<div>เด็กน้อยของคุณกำลังร้องไห้</div>
+			</div>
+			<!-- <button onclick="changeMode()">(ทดลอง)เปลี่ยน div</button> -->
+			<div class = 'howtoContainer'>
+				<h1>วิธีใช้ CryCare</h1>
+				<div class = 'howto'>
+					<div class = 'howto1'>
+						<img src="./img/board.svg" alt="board">
+						<div>
+							<div>1)วางบอร์ดไว้ในที่ที่เด็กน้อยของคุณอาศัยอยู่</div>
+						</div>
+					</div>
+					<div class = 'howto2'>
+						<img src="./img/happy.svg" alt="happy">
+						<div>
+							<div>2)เมื่อเด็กน้อยของคุณมีความสุขดี คุณก็สบายใจได้</div>
+						</div>
+					</div>
+					<div class = 'howto3'>
+						<img src="./img/crying.svg" alt="crying">
+						<div>
+							<div>3)แต่ถ้าหากลูกคุณร้องไห้ จะมีการแจ้งเตือนเพื่อให้คุณเข้าช่วยเหลือ</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class = 'historyContainer'>
+		<h1>History</h1>
+		<table class='historyTable'>
+			<thead>
+				<td>No.</td>
+				<td>Date</td>
+				<td>Time</td>
+				<td>Duration</td>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+</body>
+</html>
