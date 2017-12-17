@@ -41,6 +41,7 @@ body {
 	display: -webkit-flex;
 	justify-content: center;
 	flex-flow: row;
+	margin-bottom: 10px;
 }
 
 .hide {
@@ -76,6 +77,11 @@ body {
 	margin: 50px;
 }
 
+.whatis {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 .howto {
 	display: flex;
 	display: -webkit-flex;
@@ -89,6 +95,8 @@ body {
 	display: -webkit-flex;
 	justify-content: center;
 	flex-flow: row;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .howto > div > div {
@@ -101,6 +109,7 @@ body {
 .howto > div > img {
 	margin-right: 10px;
 	width: 15%;
+	height: 15%;
 }
 
 
