@@ -48,7 +48,7 @@ function cryingStart() {
 	var y = x.split(" ");
 	date = y[1]+","+y[2]+","+y[3];
 	time = y[4];
-	startCount(); 
+	startCount();
 }
 
 function updateTable() {
@@ -79,3 +79,12 @@ function changeToStop() {
 	c = 0;
 	updateTable();
 }
+
+var socket = io();
+socket.on('message', function(message) {
+	if(message == 'startCrying') {
+		changeToCry();
+	} else if(message == 'stopCrying') {
+		changeToStop();
+	}
+});
