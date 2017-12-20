@@ -49,7 +49,7 @@ function cryingStart() {
 	var y = x.split(" ");
 	date = y[1]+","+y[2]+","+y[3];
 	time = y[4];
-	startCount();
+	startCount(); 
 }
 
 function updateTable() {
@@ -77,11 +77,13 @@ function updateTable() {
 
 function changeToCry() {
 	w3.toggleClass('.warningContainer','hide','show');
+	document.body.style.backgroundColor = "#ff4f4f";
 	cryingStart();
 }
 
 function changeToStop() {
 	w3.toggleClass('.warningContainer','hide','show');
+	document.body.style.backgroundColor = "#cfffff";
 	stopCount();
 	duration = change(hr) + ":" + change(min) + ":" + change(c);
 	if(hr<3){
@@ -107,12 +109,9 @@ socket.on('message', function(message) {
 		changeToStop();
 	}
 });
-<<<<<<< HEAD
 
 function clearTable() {
 	var tab = document.getElementById("historyTab");
 	tab.innerHTML = "";
 	number = 1;
 }
-=======
->>>>>>> f8066c85b0da30ecc96e419eae28c41ef1371154
