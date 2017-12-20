@@ -107,9 +107,12 @@ socket.on('message', function(message) {
 		changeToStop();
 	}
 });
+<<<<<<< HEAD
 
 function clearTable() {
 	var tab = document.getElementById("historyTab");
 	tab.innerHTML = "";
 	number = 1;
 }
+=======
+>>>>>>> f8066c85b0da30ecc96e419eae28c41ef1371154
