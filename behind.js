@@ -2,6 +2,7 @@ var date;
 var time;
 var duration;
 var number = 1;
+var color;
 
 function getDate() {
 	document.getElementById("demo").innerHTML = x;
@@ -48,7 +49,7 @@ function cryingStart() {
 	var y = x.split(" ");
 	date = y[1]+","+y[2]+","+y[3];
 	time = y[4];
-	startCount(); 
+	startCount();
 }
 
 function updateTable() {
@@ -62,6 +63,15 @@ function updateTable() {
 	cell2.innerHTML = date;
 	cell3.innerHTML = time;
 	cell4.innerHTML = duration;
+	if(color==0) {
+		row.style.backgroundColor = "lightblue";
+	}
+	else if(color==1) {
+		row.style.backgroundColor = "orange";
+	}
+	else {
+		row.style.backgroundColor = "red";
+	}
 	number = number+1;
 }
 
@@ -74,8 +84,32 @@ function changeToStop() {
 	w3.toggleClass('.warningContainer','hide','show');
 	stopCount();
 	duration = change(hr) + ":" + change(min) + ":" + change(c);
+	if(hr<3){
+		color = 0;
+	}
+	else if(hr<5){
+		color = 1;
+	}
+	else {
+		color = 2;
+	}
 	hr = 0;
 	min = 0;
 	c = 0;
 	updateTable();
+}
+
+var socket = io();
+socket.on('message', function(message) {
+	if(message == 'startCrying') {
+		changeToCry();
+	} else if(message == 'stopCrying') {
+		changeToStop();
+	}
+});
+
+function clearTable() {
+	var tab = document.getElementById("historyTab");
+	tab.innerHTML = "";
+	number = 1;
 }

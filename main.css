@@ -134,8 +134,28 @@ body {
 	border: 1px solid black;
 }
 
+.historyTable > tbody > tr > td{
+	border: 1px solid black;
+}
+
 .historyTable > thead > tr > td {
 	border-left: 1px solid black;
 	border-right: 1px solid black;
+}
+
+.number {
+	width: 5vw;
+}
+
+.date {
+	width: 10vw;
+}
+
+.time {
+	width: 10vw;
+}
+
+.duration {
+	width: 10vw;
 }
 
