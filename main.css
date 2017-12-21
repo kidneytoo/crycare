@@ -35,6 +35,14 @@ body {
 	margin: 0;
 }
 
+.headerContainer > h3 {
+	margin: 0;
+}
+
+.Logo {
+	font-size: 4.5rem;
+}
+
 .interactContainer {
 	flex: 4;
 	display: flex;
